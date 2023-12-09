@@ -1,9 +1,12 @@
 'use strict';
-
-function getElementWidth(content, padding, border) {
-    return (Number.parseFloat(content) * 100 + Number.parseFloat(padding) * 100 * 2 + Number.parseFloat(border) * 100 * 2) / 100;
+let result;
+function checkAge(age) {
+    if (age >= 18) {
+        result = "You are an adult";
+        return result;
+    }
 }
 
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
+console.log(checkAge(1));
+console.log(checkAge(18));
+
